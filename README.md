@@ -42,8 +42,8 @@ arguments namely;
     repository created for hosting our images in ECR. If our repository name is `phrasee-test`, you would want to pass in 
     `phrasee-test`. Default provided is `phrasee-test`.
     - `--use_existing/-ui`: (Optional) Sometimes, we might want to use existing built image rather than 
-    building at all times. You can pass in `1` or `0` as this argument which represents True and False respectively. 
-    False being the default.  
+    building at all times. You can pass in `1` to use an existing image which has the name you provided in `--image/-a`  or 
+    `0` leave out the argument to rebuild a new image.
     - `--cluster/-c`: Provide the ECS cluster name here.
     - `--service/-s`: ECS service name. Here, could be one of the three (python-api-dev, python-api-qa or python-api-prod).
     
