@@ -35,9 +35,9 @@ Before beginning the process, you need to have
 - Inside the project root, there is a script file named `deploy.py` which is used to build the docker image, upload it to ECR and 
 deploy updates to the services already created (python-api-dev, python-api-qa or python-api-prod in this case), this file can take 7 possible 
 arguments namely;
-    - `--access/-a`: (Optional) AWS Access ID, if not provided in the environmental variable as `AWS_ACCESS_KEY_ID`.
-    - `--secret/-s`: (Optional) AWS Secret Key, if not provided in the environmental variable as `AWS_SECRET_ACCESS_KEY`.
-    - `--region/-r`: (Optional) AWS Region Name, if not provided in the environmental variable as `AWS_REGION`.
+    - `--access/-a`: (Optional) AWS Access ID, falls back to environmental variable `AWS_ACCESS_KEY_ID`.
+    - `--secret/-s`: (Optional) AWS Secret Key, falls back to environmental variable `AWS_SECRET_ACCESS_KEY`.
+    - `--region/-r`: (Optional) AWS Region Name, falls back to environmental variable `AWS_REGION`.
     - `--image/-i`: (Optional) The tag name we wish to give every freshly build docker image. This needs to match the name of the 
     repository created for hosting our images in ECR. If our repository name is `phrasee-test`, you would want to pass in 
     `phrasee-test`. Default provided is `phrasee-test`.
