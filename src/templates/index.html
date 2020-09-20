@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <style>
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .message {
+            color: forestgreen;
+        }
+
+        .error {
+            color: darkred;
+        }
+
+        .container {
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="message"></div>
+    <form action="" method="post">
+        <p>
+            <label>Word</label>
+            <input type="text" id="test-word" value="hippopotamus">
+        </p>
+        <button type="submit">Check</button>
+    </form>
+</div>
+<script>
+    function checkWord(e) {
+        e.preventDefault();
+        let messageEl = document.querySelector('.message');
+        let word = document.querySelector('#test-word').value;
+        messageEl.innerHTML = '';
+        axios.post('/api/sentence-gen/', {word: word}, {'Content-Type': 'application/json'})
+            .then(response => {
+                messageEl.innerHTML = response.data.message;
+                messageEl.classList.remove('error');
+            })
+            .catch(err => {
+                let msg = '';
+                try {
+                    msg = err.response.data.message;
+                } catch (e) {
+                    msg = err.message;
+                }
+                messageEl.innerHTML = msg;
+                messageEl.classList.add('error');
+            })
+    }
+
+    document.querySelector('form').addEventListener('submit', checkWord);
+
+    window.onload = checkWord;
+
+</script>
+</body>
+</html>
