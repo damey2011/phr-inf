@@ -20,6 +20,7 @@ Before beginning the process, you need to have
 - This assumes sufficient IAM privileges.
 - A repository is created in the ECR to keep the docker image built.
 - There are already existing ECS cluster and services to use for this demo.
+- Task Definition has Container Definition with port mapping to 80.
 
 
 #### Steps 
