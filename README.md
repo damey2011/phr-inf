@@ -47,7 +47,8 @@ arguments namely;
     - `--cluster/-c`: Provide the ECS cluster name here.
     - `--service/-s`: ECS service name. Here, could be one of the three (python-api-dev, python-api-qa or python-api-prod).
     
-    To deploy to `python-api-dev` service. We can run:
+    To deploy to `python-api-dev` service in region `eu-west-1`, service `python-api-dev`, image/ECR repo name `phrasee-test`, and 
+    cluster name `python-api-cluster`. We can run:
     
     ```bash
     python deploy.py -a <AWS_ACCESS_ID> -s <AWS_SECRET> -r eu-west-1 -sv python-api-dev -i phrasee-test -c python-api-cluster 
