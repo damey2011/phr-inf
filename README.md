@@ -38,7 +38,7 @@ arguments namely;
     - `--access/-a`: (Optional) AWS Access ID, falls back to environmental variable `AWS_ACCESS_KEY_ID`.
     - `--secret/-s`: (Optional) AWS Secret Key, falls back to environmental variable `AWS_SECRET_ACCESS_KEY`.
     - `--region/-r`: (Optional) AWS Region Name, falls back to environmental variable `AWS_REGION`.
-    - `--image/-i`: (Optional) The tag name we wish to give every freshly build docker image. This needs to match the name of the 
+    - `--image/-i`: (Optional) The tag name we wish to give the built docker image. This needs to match the name of the 
     repository created for hosting our images in ECR. If our repository name is `phrasee-test`, you would want to pass in 
     `phrasee-test`. Default provided is `phrasee-test`.
     - `--use_existing/-ui`: (Optional) Sometimes, we might want to use existing built image rather than 
