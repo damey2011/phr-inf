@@ -32,7 +32,7 @@ Before beginning the process, you need to have
     ```
   Should all go well (No test failures), move on to the next step.
 
-- Inside the project root, there is a file named `deployer.py` which is used to build the docker image, deploy it to ECR and 
+- Inside the project root, there is a file named `deploy.py` which is used to build the docker image, deploy it to ECR and 
 deploy updates to the services already created (python-api-dev, python-api-qa, python-api-prod), this file can take 7 possible 
 arguments namely;
     - `--access/-a`: AWS Access ID, if not provided in the environmental variable as `AWS_ACCESS_KEY_ID`.
@@ -49,7 +49,7 @@ arguments namely;
     To deploy to `python-api-dev` service. We can run:
     
     ```bash
-    python deployer.py -a <AWS_ACCESS_ID> -s <AWS_SECRET> -r eu-west-1 -sv python-api-dev -i phrasee-test -c python-api-cluster 
+    python deploy.py -a <AWS_ACCESS_ID> -s <AWS_SECRET> -r eu-west-1 -sv python-api-dev -i phrasee-test -c python-api-cluster 
     ```
 
 - The instance would be accessible through the IP assigned to the new task created under the service specified for deployment 
