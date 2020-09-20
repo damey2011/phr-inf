@@ -23,7 +23,7 @@ Before beginning the process, you need to have
 - Task Definition has Container Definition with port mapping to 80.
 
 
-#### Steps 
+### Steps 
 
 - Navigate into the project folder.
 
