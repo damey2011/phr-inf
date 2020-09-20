@@ -32,7 +32,7 @@ Before beginning the process, you need to have
     ```
   Should all go well (No test failures), move on to the next step.
 
-- Inside the project root, there is a file named `deploy.py` which is used to build the docker image, deploy it to ECR and 
+- Inside the project root, there is a script file named `deploy.py` which is used to build the docker image, deploy it to ECR and 
 deploy updates to the services already created (python-api-dev, python-api-qa, python-api-prod), this file can take 7 possible 
 arguments namely;
     - `--access/-a`: AWS Access ID, if not provided in the environmental variable as `AWS_ACCESS_KEY_ID`.
