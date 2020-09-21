@@ -11,8 +11,9 @@ Key infrastructures to this include:
 
 ### Requirements
 
-Before beginning the process, you need to have 
+- Before beginning the process, you need to have 
 [docker installed](https://docs.docker.com/engine/installation/#installation).
+- Python (3.8)
 
 
 ### Assumptions
@@ -27,6 +28,14 @@ Before beginning the process, you need to have
 ### Steps 
 
 - Navigate into the project folder.
+
+- Setup virtual environment and install requirements if you have not already installed them. The deployment 
+script has other python dependencies. Using `virtualenv`:
+    ```bash
+    virtualenv -p python3.8 env
+    pip install -r requirements.txt
+    source env/bin/activate
+    ```
 
 - Run the unit tests using:
     ```bash
